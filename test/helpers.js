@@ -180,7 +180,9 @@ helpers.testLevels = function (levels, transport, assertMsg, assertFn) {
 
   var circmetadatatest = {
     topic: function () {
+      transport.decycle = true;
       transport.log('info', 'test message', circmetadata, this.callback.bind(this, null));
+      transport.decycle = false;
     }
   };
 

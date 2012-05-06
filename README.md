@@ -456,6 +456,7 @@ The Console transport takes two simple options:
 * __silent:__ Boolean flag indicating whether to suppress output (default false).
 * __colorize:__ Boolean flag indicating if we should colorize output (default false).
 * __timestamp:__ Boolean flag indicating if we should prepend output with timestamps (default false). If function is specified, its return value will be used instead of timestamps.
+* __decycle:__ Boolean flag indicating if `meta` should be [decycled](https://github.com/douglascrockford/JSON-js).
 
 *Metadata:* Logged via util.inspect(meta);
 
@@ -475,6 +476,7 @@ The File transport should really be the 'Stream' transport since it will accept 
 * __maxFiles:__ Limit the number of files created when the size of the logfile is exceeded.
 * __stream:__ The WriteableStream to write output to.
 * __json:__ If true, messages will be logged as JSON (default true).
+* __decycle:__ Boolean flag indicating if `meta` should be [decycled](https://github.com/douglascrockford/JSON-js).
 
 *Metadata:* Logged via util.inspect(meta);
 
@@ -491,6 +493,7 @@ The Loggly transport is based on [Nodejitsu's][5] [node-loggly][6] implementatio
 * __inputName:__ The name of the input this instance should log to.
 * __inputToken:__ The input token of the input this instance should log to.
 * __json:__ If true, messages will be sent to Loggly as JSON.
+* __decycle:__ Boolean flag indicating if `meta` should be [decycled](https://github.com/douglascrockford/JSON-js).
 
 *Metadata:* Logged in suggested [Loggly format][2]
 

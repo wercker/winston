@@ -23,3 +23,4 @@ logger.handleExceptions();
 setTimeout(function () {
   throw new Error('OH NOES! It failed!');
 }, 1000);
+
